@@ -36,3 +36,10 @@ function incomplete_core(input_array) {
     // creates array sorted in descending order
     const sorted_course_counter = new Map([...course_counter.entries()].sort((a, b) => a[1][0] - b[1][0]).reverse());
     console.log(sorted_course_counter);
+
+    function course_rating(course_name) {
+        return "https://www.ratemycourses.io/purdue/course/"+course_name.toLowerCase();
+    }
+
+    function reddit_search(course_name) {
+    }
