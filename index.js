@@ -1,5 +1,5 @@
 let core_classes = ["CS 18000","CS 18200","CS 24000","CS 25000","CS 25100","CS 25200",
-                      "MA 16100","MA 16200","MA 26100","MA 26500"].sort();
+                      "MA 16100","MA 16200","MA 26100","MA 26500"];
 
 console.log(core_classes)
 
@@ -28,7 +28,7 @@ let AP4Credit = new Map([
     ["AP Microeconomics", ["ECON 25100"],],
     ["AP Physics I", ["PHYS 22000"],],
     ["AP Physics II", ["PHYS 22100"],],
-    ["AP Physics B ", ["PHYS 22100","PHYS 22000"],],
+    ["AP Physics B", ["PHYS 22100","PHYS 22000"],],
     ["AP Physics C: electricity and magnetism", ["PHYS 27200"],],
     ["AP Physics C: mechanics", ["PHYS 17200"],],
     ["AP Precalculus", ["MA 15800"],],
@@ -38,12 +38,12 @@ let AP4Credit = new Map([
     ["AP Statistics", ["STAT 30100"],],
     ["AP United States history", ["HIST 15100","HIST 15200"],],
     ["AP World history", ["HIST 10500"]],
-        ]
-    )
+    ])
 
-function incomplete_core(input_array) {
-    const input = input_array; // input from the text field
-    let left_core_classes = core_classes.filter(val => !input.includes(val)); //  removes courses that are in both arrays
+console.log("test hash maps access" + AP4Credit.get("AP Physics B")[0]);
+
+function incomplete_core(input_array) { // input text field
+    let left_core_classes = core_classes.filter(val => !input_array.includes(val)); //  removes courses that are in both arrays
     return left_core_classes;
 }
 
@@ -161,7 +161,7 @@ function incomplete_core(input_array) {
     }
     // creates array sorted in descending order
     const sorted_course_counter = new Map([...course_counter.entries()].sort((a, b) => a[1][0] - b[1][0]).reverse());
-    console.log(sorted_course_counter);
+    //console.log(sorted_course_counter);
 
     function course_rating(course_name) {
         return "https://www.ratemycourses.io/purdue/course/"+course_name.toLowerCase();
@@ -172,30 +172,8 @@ function incomplete_core(input_array) {
            return "https://www.reddit.com/r/Purdue/search/?q="+ course_name.slice(0,-2) +"&restrict_sr=1&sr_nsfw=";
        }
        return "https://www.reddit.com/r/Purdue/search/?q="+ course_name +"&restrict_sr=1&sr_nsfw=";
+
     }
-
-function createDropDownOnPage1() {
-
-    const dropdown1 = document.getElementById("myDropdown")
-    let displayHTML = ""
-
-    core_classes.forEach((el) => {
-
-        displayHTML += `
-        <a>
-            ${el}
-        </a>
-        `
-
-    }) 
-
-    console.log(displayHTML)
-
-    dropdown1.innerHTML = displayHTML
-
-}
-
-createDropDownOnPage1()
 
 //provide array of classes student finished, returns map oof
 function courselist_return(historyofclasses) {
@@ -223,3 +201,81 @@ function return_particular_category(category, history_in_that_category) {
     return total_courses_in_the_category;
 }
 return_particular_category("Oral Communications", ["EDPS31500"])
+
+let completedCoursesOptions = core_classes
+
+for (let [i,v] of AP4Credit) {
+    console.log('Key is: ' + i + '. Value is: ' + v);
+    completedCoursesOptions.push(i)
+}
+
+completedCoursesOptions.sort()
+
+let temp_CompletedCoursesOptions = []
+let displayHTML = ""
+let completedCourses = []
+
+function createInitDropDownOnPage1() {
+
+    const dropdown1 = document.getElementById("myDropdown")
+    displayHTML = ""
+
+    completedCoursesOptions.forEach((el) => {
+
+        displayHTML += `
+        <a onclick="addCompletedClass('${el}')">
+            ${el}
+        </a>
+        `
+
+    })
+
+    dropdown1.innerHTML = displayHTML
+
+    displayHTML = ""
+
+}
+
+createInitDropDownOnPage1()
+
+function filterFunction() {
+    var input, filter, ul, li, a, i;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    div = document.getElementById("myDropdown");
+    a = div.getElementsByTagName("a");
+    for (i = 0; i < a.length; i++) {
+        txtValue = a[i].textContent || a[i].innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            a[i].style.display = "";
+        } else {
+            a[i].style.display = "none";
+        }
+    }
+}
+
+const completedClassesDiv = document.getElementById("completedClasses")
+
+function addCompletedClass(...clas) {
+
+    if (completedCourses.includes(clas[0])) {
+        // continue
+    } else {
+
+        completedCourses.push(clas[0])
+
+        completedClassesDiv.innerHTML += `
+                                        <div>
+                                        <button class="completedClass-btn">
+                                            ${clas[0]}
+                                            <button class="completedClassX-btn" onlick="removeCompletedClass('${clas[0]}')">
+                                                x
+                                            </button>
+                                        </button>
+                                        </div>
+                                    `
+    }
+
+}
+
+
