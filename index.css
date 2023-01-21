@@ -14,10 +14,38 @@ body {
 
 
 #form-btns {
-    margin-top: 700px;
+    margin-top: 550px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+}
+
+#completedClasses {
+    margin-top: 150px;
+    margin-left: 40px;
+    margin-right: 40px;
+    display: flex;
+    flex-direction: column;
+    overflow: scroll;
+}
+
+.completedClass-btn {
+    width: fit-content;
+    padding: 5px 10px;
+    font-size: 20px;
+    border: 2px solid #9D968D;
+    background-color: #28261c;
+    color: #9D968D;
+    border-radius: 20px;
+}
+
+.completedClassX-btn {
+    width: fit-content;
+    padding: 5px 10px;
+    font-size: 20px;
+    border: 2px solid #9D968D;
+    background-color: #28261c;
+    color: #9D968D;
 }
 
 input {
