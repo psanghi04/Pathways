@@ -42,4 +42,8 @@ function incomplete_core(input_array) {
     }
 
     function reddit_search(course_name) {
+       if (course_name.slice(-2) == "00") {
+           return "https://www.reddit.com/r/Purdue/search/?q="+ course_name.slice(0,-2) +"&restrict_sr=1&sr_nsfw=";
+       }
+       return "https://www.reddit.com/r/Purdue/search/?q="+ course_name +"&restrict_sr=1&sr_nsfw=";
     }
