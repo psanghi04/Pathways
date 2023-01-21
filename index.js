@@ -63,14 +63,99 @@ function incomplete_core(input_array) {
     rec.set("Technical Writing",['ENGL30400','ENGL30900','ENGL41900','ENGL42000','ENGL42100','ENGL42201','ENGL42400','ENGL49000','MGMT39000','CHM46200', 'COM21700']);
     rec.set("Technical Presentation",['BIOL44100','COM11400','COM31400','COM31500','COM32400','COM41500','SCLA10200','CHM46200', 'COM21700']);
 
+    let human = false;
+    let beh_sci = false;
+    let oral = false;
+    let info_lit = false;
+    let quan_res = false;
+    let sci = false;
+    let sts = false;
+    let wrt_com = false;
+    let grt_is = false;
+    let lab_sci = false;
+    let lang = false;
+    let tech_wrt = false;
+    let tech_pres = false;
+
     let course_counter = new Map([]);
     for (let [i,v] of rec) {
-        for (let j = 0; j < v.length; j++) {
-            if (course_counter.has(v[j])) {
-                let arr = course_counter.get(v[j]); // gets the course list
-                course_counter.set(v[j],[arr[0]+1,arr[1]+","+i]) // adds 1 to counter and adds the requirement it satisfies
-            } else {
-                course_counter.set(v[j], [1, i]);
+        let flag = false;
+        switch (i) {
+            case "Humanities":
+                if (human) {
+                    flag = true;
+                }
+                break;
+            case "Behavioural Science":
+                if (beh_sci) {
+                    flag = true;
+                }
+                break;
+            case "Oral Communication":
+                if (oral) {
+                    flag = true;
+                }
+                break;
+            case "Information Literacy":
+                if (info_lit) {
+                    flag = true;
+                }
+                break;
+            case "Quantitative Reasoning":
+                if (quan_res) {
+                    flag = true;
+                }
+                break;
+            case "Science":
+                if (sci) {
+                    flag = true;
+                }
+                break;
+            case "Science, Tech and Society":
+                if (sts) {
+                    flag = true;
+                }
+                break;
+            case "Written Composition":
+                if (wrt_com) {
+                    flag = true;
+                }
+                break;
+            case "Greater Issues in Science":
+                if (grt_is) {
+                    flag = true;
+                }
+                break;
+            case "Laboratory Science":
+                if (lab_sci) {
+                    flag = true;
+                }
+                break;
+            case "Languages":
+                if (lang) {
+                    flag = true;
+                }
+                break;
+            case "Technical Writing":
+                if (tech_wrt) {
+                    flag = true;
+                }
+                break;
+            case "Technical Presentation":
+                if (tech_pres) {
+                    flag = true;
+                }
+                break;
+        }
+        if (!flag) {
+            for (let j = 0; j < v.length; j++) {
+                if (course_counter.has(v[j])) {
+                    let arr = course_counter.get(v[j]); // gets the course list
+                    arr[1].push(i);
+                    course_counter.set(v[j], [arr[0] + 1, arr[1]]) // adds 1 to counter and adds the requirement it satisfies
+                } else {
+                    course_counter.set(v[j], [1, [i]]);
+                }
             }
         }
     }
@@ -111,3 +196,30 @@ function createDropDownOnPage1() {
 }
 
 createDropDownOnPage1()
+
+//provide array of classes student finished, returns map oof
+function courselist_return(historyofclasses) {
+    let returned_courses = sorted_course_counter;
+
+}
+
+//category is for example Oral Communications, history_in_that_category is history of classes,
+//returns sorted courses in that category
+function return_particular_category(category, history_in_that_category) {
+    let total_courses_in_the_category = rec.get(category);
+    //console.log("originally ",total_courses_in_the_category)
+    for (let i = 0; i < history_in_that_category.length; i++)
+    {
+        for (let j = 0; j < rec.get(category).length; j++) {
+            if (rec.get(category)[j] == history_in_that_category[i]) {
+                delete total_courses_in_the_category[j];
+            }
+        }
+
+    }
+    total_courses_in_the_category.sort((a, b) => a[1][0] - b[1][0]).reverse();
+
+    console.log(total_courses_in_the_category);
+    return total_courses_in_the_category;
+}
+return_particular_category("Oral Communications", ["EDPS31500"])
