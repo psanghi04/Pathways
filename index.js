@@ -1,5 +1,46 @@
 let core_classes = ["CS 18000","CS 18200","CS 24000","CS 25000","CS 25100","CS 25200",
-                      "MA 16100","MA 16200","MA 26100","MA 26500"];
+                      "MA 16100","MA 16200","MA 26100","MA 26500"].sort();
+
+console.log(core_classes)
+
+let AP4Credit = new Map([
+    ["AP Biology", ["BIOL 11000", "BIOL 11100"],],
+    ["AP Calculus AB", ["MA 16500"],],
+    ["AP Calculus BC", ["MA 16500","MA 16600"],],
+    ["AP Calculus BC - AB (subscore)", ["MA 16500"],],
+    ["AP Chemistry", ["CHM 11500","CS 11600"],],
+    ["AP Chinese language and culture", ["CHNS 10100", "CHNS 10200", "CHNS 20100" , "CHNS 20200"],],
+    ["AP Computer science A or AB", ["CS 17700"],],
+    ["AP Computer science principles", ["CS 17700"],],
+    ["AP English language and composition", ["ENGL 10600"],],
+    ["AP English literature and composition", ["ENGL 23100"],],
+    ["AP Environmental science", ["EAPS 12500"],],
+    ["AP European history", ["HIST 10400"],],
+    ["AP French language", ["FR 10100", "FR 10200", "FR 20100","FR 20200"],],
+    ["AP German language", ["GER 10100", "GER 10200", "GER 20100","GER 20200"],],
+    ["AP Government and politics: comparative", ["POL 14100"],],
+    ["AP Government and politics: United States", ["POL 10100"],],
+    ["AP Human geography", ["EAPS 12000"],],
+    ["AP Italian language", ["ITAL 10100", "ITAL 10200", "ITAL 20100","ITAL 20200"],],
+    ["AP Japanese language and culture", ["JPNS 10100", "JPNS 10200", "JPNS 20100","JPNS 20200"],],
+    ["AP Latin", ["LATN 10100", "LATN 10200","LATN 20100"],],
+    ["AP Macroeconomics", ["ECON 25200"],],
+    ["AP Microeconomics", ["ECON 25100"],],
+    ["AP Physics I", ["PHYS 22000"],],
+    ["AP Physics II", ["PHYS 22100"],],
+    ["AP Physics B ", ["PHYS 22100","PHYS 22000"],],
+    ["AP Physics C: electricity and magnetism", ["PHYS 27200"],],
+    ["AP Physics C: mechanics", ["PHYS 17200"],],
+    ["AP Precalculus", ["MA 15800"],],
+    ["AP Psychology", ["PSY 12000"],],
+    ["AP Spanish language", ["SPAN 10100", "SPAN 10200", "SPAN 20100", "SPAN 20200"],],
+    ["AP Spanish literature", ["SPAN 24100"],],
+    ["AP Statistics", ["STAT 30100"],],
+    ["AP United States history", ["HIST 15100","HIST 15200"],],
+    ["AP World history", ["HIST 10500"]],
+        ]
+    )
+
 function incomplete_core(input_array) {
     const input = input_array; // input from the text field
     let left_core_classes = core_classes.filter(val => !input.includes(val)); //  removes courses that are in both arrays
@@ -132,6 +173,30 @@ function incomplete_core(input_array) {
        }
        return "https://www.reddit.com/r/Purdue/search/?q="+ course_name +"&restrict_sr=1&sr_nsfw=";
     }
+
+function createDropDownOnPage1() {
+
+    const dropdown1 = document.getElementById("myDropdown")
+    let displayHTML = ""
+
+    core_classes.forEach((el) => {
+
+        displayHTML += `
+        <a>
+            ${el}
+        </a>
+        `
+
+    }) 
+
+    console.log(displayHTML)
+
+    dropdown1.innerHTML = displayHTML
+
+}
+
+createDropDownOnPage1()
+
 //provide array of classes student finished, returns map oof
 function courselist_return(historyofclasses) {
     let returned_courses = sorted_course_counter;

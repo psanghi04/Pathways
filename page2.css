@@ -1,9 +1,9 @@
 body {
-    background-color: #373A36;
+    background-color: #C28E0E;
 }
 
 #form1 {
-    box-shadow: 0px 0px 10px #C28E0E;
+    box-shadow: 0px 0px 10px #493321;
     box-sizing: border-box;
     width: 90%;
     height: 1000px;
@@ -48,13 +48,8 @@ input {
     background-color: #b5a85d;
 }
 
-#back-btn {
-    background-color: #60614e;
-    box-shadow: none;
-}
-
 input:hover {
-    box-shadow: 0px 0px 8px #C28E0E;
+    box-shadow: 0px 0px 8px #493321;
 }
 
 /* 
