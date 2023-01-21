@@ -27,7 +27,7 @@ function incomplete_core(input_array) {
         for (let j = 0; j < v.length; j++) {
             if (course_counter.has(v[j])) {
                 let arr = course_counter.get(v[j]); // gets the course list
-                course_counter.set(v[j],[arr[0]+1,arr[1]+","+i]) // adds 1 to counter and adds the requirement it satisfies
+                course_counter.set(v[j],[arr[0]+1,arr[1]+","+i]); // adds 1 to counter and adds the requirement it satisfies
             } else {
                 course_counter.set(v[j], [1, i]);
             }
@@ -35,7 +35,6 @@ function incomplete_core(input_array) {
     }
     // creates array sorted in descending order
     const sorted_course_counter = new Map([...course_counter.entries()].sort((a, b) => a[1][0] - b[1][0]).reverse());
-    console.log(sorted_course_counter);
 
     function course_rating(course_name) {
         return "https://www.ratemycourses.io/purdue/course/"+course_name.toLowerCase();
@@ -43,3 +42,29 @@ function incomplete_core(input_array) {
 
     function reddit_search(course_name) {
     }
+    //provide array of classes student finished, returns map oof
+	function courselist_return(historyofclasses) {
+        returned_courses = sorted_course_counter;
+
+	}
+
+    //category is for example Oral Communications, history_in_that_category is history of classes,
+    //returns sorted courses in that category
+    function return_particular_category(category, history_in_that_category) {
+        total_courses_in_the_category = rec.get(category);
+        //console.log("originally ",total_courses_in_the_category)
+        for (let i = 0; i < history_in_that_category.length; i++)
+        {
+            for (let j = 0; j < rec.get(category).length; j++) {
+                if (rec.get(category)[j] == history_in_that_category[i]) {
+                    delete total_courses_in_the_category[j];
+                }
+            }
+
+        }
+        total_courses_in_the_category.sort((a, b) => a[1][0] - b[1][0]).reverse();
+
+        console.log(total_courses_in_the_category);
+        return total_courses_in_the_category;
+    }
+    return_particular_category("Oral Communications", ["EDPS31500"])
