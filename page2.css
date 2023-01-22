@@ -6,13 +6,18 @@ body {
     box-shadow: 0px 0px 10px #493321;
     box-sizing: border-box;
     width: 90%;
-    height: 1000px;
+    height: 6850px;
     padding: 50px;
     margin: 40px;
+    
+    /* display: grid;
+    display:flex;
+    justify-content:space-between; */
 }
 
+
 #form-btns {
-    margin-top: 700px;
+    margin-top: 100px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -27,12 +32,36 @@ input {
     display: block;
     margin: auto;
     font-size: 30px;
+    font-family: Arial;
     color: #9a905e;
     padding: 10px 20px;
     margin-top: 20px;
     box-sizing: border-box;
 }
+.cards {
+    box-shadow: 0px 0px 10px #ffffff;
+    width: 700px;
+    height: 300px;
+    padding: 50px;
+    margin: 40px;
 
+    display:flex;
+  justify-content:space-between;
+/* 
+    width:50%; */
+    
+}
+.grid-item {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    font-size: 30px;
+    font-family: Arial;
+    text-align: center;
+    width:50%;
+    overflow: scroll;
+    font-size:20px;
+  }
 .nav-btn {
     border-radius: 3px;
     color: #373A36;
@@ -44,12 +73,23 @@ input {
     font-size: 30px;
 }
 
+
 .nav-btn:hover {
     background-color: #b5a85d;
 }
 
 input:hover {
     box-shadow: 0px 0px 8px #493321;
+}
+
+#next-btn {
+    background-color: #60614e;
+    box-shadow: none;
+}
+
+.headings {
+    font-family: Arial;
+    font-size: 25px;
 }
 
 /* 
