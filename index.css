@@ -1,5 +1,5 @@
 body {
-    background-color: #373A36;
+    background-color: #1e211d;
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -33,9 +33,9 @@ body {
     width: fit-content;
     padding: 5px 10px;
     font-size: 20px;
-    border: 2px solid #9D968D;
-    background-color: #28261c;
-    color: #9D968D;
+    border: 2px solid #494540;
+    background-color: #a8931e;
+    color: #1e211d;
     border-radius: 20px;
     margin-bottom: 10px;
     display: flex;
@@ -45,13 +45,16 @@ body {
 .completedClassX-btn {
     padding: 5px 10px;
     font-size: 20px;
-    background-color: #28261c;
+    background-color: #6e6253;
+    fill-opacity: 0;
     border: none;
-    color: #ea4c46;
+    border-radius: 50%;
+    color: #ffe135;
+    margin-left: 10px;
 }
 
 .completedClassX-btn:hover {
-    font-weight: 900;
+    background-color: #494540;
 }
 
 input {
