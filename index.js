@@ -213,7 +213,16 @@ completedCoursesOptions.sort()
 
 let temp_CompletedCoursesOptions = []
 let displayHTML = ""
-let completedCourses = []
+function start() {
+
+    if (localStorage.getItem("completedCourses") === null) {
+        localStorage.completedCourses = JSON.stringify(["init"])
+    }
+}
+
+start()
+
+let completedCourses = JSON.parse(localStorage.completedCourses)
 
 function createInitDropDownOnPage1() {
 
@@ -223,7 +232,7 @@ function createInitDropDownOnPage1() {
     completedCoursesOptions.forEach((el) => {
 
         displayHTML += `
-        <a onclick="addCompletedClass('${el}')">
+        <a style="font-family: Arial" onclick="addCompletedClass('${el}')">
             ${el}
         </a>
         `
@@ -254,7 +263,7 @@ function filterFunction() {
     }
 }
 
-const completedClassesDiv = document.getElementById("completedClasses")
+let completedClassesDiv = document.getElementById("completedClassesDiv")
 
 function addCompletedClass(...clas) {
 
@@ -265,17 +274,46 @@ function addCompletedClass(...clas) {
         completedCourses.push(clas[0])
 
         completedClassesDiv.innerHTML += `
-                                        <div>
-                                        <button class="completedClass-btn">
-                                            ${clas[0]}
-                                            <button class="completedClassX-btn" onlick="removeCompletedClass('${clas[0]}')">
+                                            <div class="completedClass-btn">
+
+                                                <div>
+                                                ${clas[0]}
+                                                </div>
+
+                                                <div style="color: #ea4c46; font-family: Arial" class="completedClassX-btn" onlick="removeCompletedClass('${clas[0]}')">
                                                 x
-                                            </button>
-                                        </button>
-                                        </div>
-                                    `
+                                                </div>
+                                            </div>
+                                        `
     }
 
+}
+
+let temp = []
+
+function removeCompletedClass(...clas) {
+
+    completedCourses.forEach((el) => {
+
+        if (el !== clas[0]) { // to delete
+
+            temp.push(clas)
+
+            completedClassesDiv.innerHTML += `
+                                                <div class="completedClass-btn">
+    
+                                                    <div>
+                                                    ${clas[0]}
+                                                    </div>
+    
+                                                    <div style="color: #ea4c46; font-family: Arial" class="completedClassX-btn" onlick="removeCompletedClass('${clas[0]}')">
+                                                    x
+                                                    </div>
+                                                </div>
+                                            `    
+        }
+
+    })
 }
 
 

@@ -12,16 +12,17 @@ body {
 }
 
 #form-btns {
-    margin-top: 550px;
+    margin-top: 170px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
 
-#completedClasses {
+#completedClassesDiv {
     margin-top: 150px;
     margin-left: 40px;
     margin-right: 40px;
+    height: 40%;
     display: flex;
     flex-direction: column;
     overflow: scroll;
@@ -35,15 +36,15 @@ body {
     background-color: #28261c;
     color: #9D968D;
     border-radius: 20px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: row;
 }
 
 .completedClassX-btn {
-    width: fit-content;
     padding: 5px 10px;
     font-size: 20px;
-    border: 2px solid #9D968D;
     background-color: #28261c;
-    color: #9D968D;
 }
 
 input {
