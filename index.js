@@ -232,7 +232,43 @@ completedCoursesOptions.sort()
 
 let temp_CompletedCoursesOptions = []
 let displayHTML = ""
-let completedCourses = []
+
+let completedClassesDiv = document.getElementById("completedClassesDiv")
+let completedCourses
+
+function start() {
+
+    if (localStorage.getItem("completedCourses") === null) {
+        localStorage.completedCourses = JSON.stringify(["init"])
+    } else {
+
+        if (JSON.parse(localStorage.completedCourses)[0] !== "init") {
+
+            completedCourses = JSON.parse(localStorage.completedCourses)
+            
+            completedCourses.forEach(el => {
+
+                completedClassesDiv.innerHTML += `
+                            <div class="completedClass-btn">
+
+                                <div>
+                                    ${el}
+                                </div>
+
+                                <button class="completedClassX-btn" onlick="removeCompletedClass('${el}')">
+                                x
+                                </button>
+                            </div>
+                                                `
+
+            })
+        }
+    }
+}
+
+start()
+
+completedCourses = JSON.parse(localStorage.completedCourses)
 
 function createInitDropDownOnPage1() {
 
@@ -242,7 +278,7 @@ function createInitDropDownOnPage1() {
     completedCoursesOptions.forEach((el) => {
 
         displayHTML += `
-        <a onclick="addCompletedClass('${el}')">
+        <a style="font-family: Arial" onclick="addCompletedClass('${el}')">
             ${el}
         </a>
         `
@@ -273,28 +309,62 @@ function filterFunction() {
     }
 }
 
-const completedClassesDiv = document.getElementById("completedClasses")
-
 function addCompletedClass(...clas) {
 
     if (completedCourses.includes(clas[0])) {
         // continue
     } else {
 
-        completedCourses.push(clas[0])
+        if (completedCourses[0] === "init") {
+            completedCourses[0] = clas[0]
+        } else {
+
+            completedCourses.push(clas[0])
+        }
 
         completedClassesDiv.innerHTML += `
-                                        <div>
-                                        <button class="completedClass-btn">
-                                            ${clas[0]}
-                                            <button class="completedClassX-btn" onlick="removeCompletedClass('${clas[0]}')">
+                                            <div class="completedClass-btn">
+
+                                                <div>
+                                                ${clas[0]}
+                                                </div>
+
+                                                <button class="completedClassX-btn" onlick="removeCompletedClass('${clas[0]}')">
                                                 x
-                                            </button>
-                                        </button>
-                                        </div>
-                                    `
+                                                </button>
+                                            </div>
+                                        `
     }
 
+    localStorage.completedCourses = JSON.stringify(completedCourses);
+
+}
+
+let temp = []
+
+function removeCompletedClass(...clas) {
+
+    completedCourses.forEach((el) => {
+
+        if (el !== clas[0]) { // to delete
+
+            temp.push(clas)
+
+            completedClassesDiv.innerHTML += `
+                                                <div class="completedClass-btn">
+    
+                                                    <div>
+                                                     ${clas[0]}
+                                                    </div>
+    
+                                                    <button class="completedClassX-btn" onlick="removeCompletedClass('${clas[0]}')">
+                                                    x
+                                                    </button>
+                                                </div>
+                                            `    
+        }
+
+    })
 }
 
 
