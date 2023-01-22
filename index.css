@@ -1,5 +1,6 @@
 body {
     background-color: #373A36;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 #form1 {
@@ -12,14 +13,14 @@ body {
 }
 
 #form-btns {
-    margin-top: 170px;
+    margin-top: 110px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
 
 #completedClassesDiv {
-    margin-top: 150px;
+    margin-top: 210px;
     margin-left: 40px;
     margin-right: 40px;
     height: 40%;
@@ -45,6 +46,12 @@ body {
     padding: 5px 10px;
     font-size: 20px;
     background-color: #28261c;
+    border: none;
+    color: #ea4c46;
+}
+
+.completedClassX-btn:hover {
+    font-weight: 900;
 }
 
 input {
@@ -113,7 +120,7 @@ display: none;
 position: absolute;
 background-color: #f9f9f9;
 min-width: 75%;
-height: 120px;
+height: 180px;
 overflow: scroll;
 box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 z-index: 1;
