@@ -238,6 +238,8 @@ let completedCourses
 
 function start() {
 
+    console.log(localStorage.getItem("completedCourses") === null)
+
     if (localStorage.getItem("completedCourses") === null) {
         localStorage.completedCourses = JSON.stringify(["init"])
     } else {
@@ -255,7 +257,7 @@ function start() {
                                     ${el}
                                 </div>
 
-                                <button class="completedClassX-btn" onlick="removeCompletedClass('${el}')">
+                                <button class="completedClassX-btn" onclick="removeCompletedClass('${el}')">
                                 x
                                 </button>
                             </div>
@@ -329,7 +331,7 @@ function addCompletedClass(...clas) {
                                                 ${clas[0]}
                                                 </div>
 
-                                                <button class="completedClassX-btn" onlick="removeCompletedClass('${clas[0]}')">
+                                                <button class="completedClassX-btn" onclick="removeCompletedClass('${clas[0]}')">
                                                 x
                                                 </button>
                                             </div>
@@ -344,20 +346,24 @@ let temp = []
 
 function removeCompletedClass(...clas) {
 
+    completedClassesDiv.innerHTML = ""
+
+    console.log("before deleting: " + completedCourses)
+
     completedCourses.forEach((el) => {
 
         if (el !== clas[0]) { // to delete
 
-            temp.push(clas)
+            temp.push(el)
 
             completedClassesDiv.innerHTML += `
                                                 <div class="completedClass-btn">
     
                                                     <div>
-                                                     ${clas[0]}
+                                                     ${el}
                                                     </div>
     
-                                                    <button class="completedClassX-btn" onlick="removeCompletedClass('${clas[0]}')">
+                                                    <button class="completedClassX-btn" onclick="removeCompletedClass('${el}')">
                                                     x
                                                     </button>
                                                 </div>
@@ -365,6 +371,12 @@ function removeCompletedClass(...clas) {
         }
 
     })
+
+    completedCourses = temp
+    console.log(completedCourses)
+    localStorage.completedCourses = JSON.stringify(completedCourses)
+
+    temp = []
 }
 
 
