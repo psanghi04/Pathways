@@ -1,7 +1,6 @@
 let core_classes = ["CS 18000","CS 18200","CS 24000","CS 25000","CS 25100","CS 25200",
                       "MA 16100","MA 16200","MA 26100","MA 26500"];
 
-console.log(core_classes)
 
 let AP4Credit = new Map([
     ["AP Biology", ["BIOL 11000", "BIOL 11100"],],
@@ -62,7 +61,6 @@ function incomplete_core(input_array) { // input text field
     rec.set("Languages",['GER10100', 'GER10200', 'GER11200', 'GER20100', 'GER20200', 'GER21100', 'GER21200', 'GER22300', 'GER22400', 'FR10100', 'FR10200', 'FR11200', 'FR20100', 'FR20200', 'FR21100', 'FR21200', 'FR22400', 'FR23000', 'FR24100', 'FR28000', 'FR30100', 'FR30200', 'FR31200', 'FR32400', 'FR33000', 'FR34100', 'FR34200', 'FR38000', 'FR39400', 'FR39600', 'FR39900', 'FR40100', 'FR40200', 'FR42400', 'FR44300', 'FR48000', 'CLCS18100', 'CLCS22000', 'CLCS23010', 'CLCS23100', 'CLCS23200', 'CLCS23300', 'CLCS23400', 'CLCS23500', 'CLCS23600', 'CLCS23700', 'CLCS23800', 'CLCS23900', 'CLCS28000', 'CLCS33700', 'CLCS33900', 'CLCS38000', 'CLCS38100',  'CLCS38300', 'CLCS38500', 'CLCS38600', 'CLCS38700', 'CLCS48000', 'CLCS48100', 'CLCS48300', 'CLCS49900', 'CHNS10100', 'CHNS10200', 'CHNS10700', 'CHNS20100', 'CHNS20200', 'CHNS20700', 'CHNS22400', 'CHNS23000', 'CHNS24100', 'CHNS28000', 'CHNS28100', 'CHNS28500', 'CHNS30100', 'CHNS30200', 'CHNS30500', 'CHNS31300', 'CHNS33000', 'CHNS34100', 'CHNS34200', 'CHNS39900', 'CHNS40100', 'CHNS40200', 'CHNS49000', 'CHNS49300', 'ARAB10100', 'ARAB10200', 'ARAB11100', 'ARAB11200', 'ARAB20100', 'ARAB20200', 'ARAB21100', 'ARAB21200', 'ARAB22400', 'ARAB23000', 'ARAB23900', 'ARAB28000', 'ARAB28100', 'ARAB30100', 'ARAB30200', 'ARAB33400']);
     rec.set("Technical Writing",['ENGL30400','ENGL30900','ENGL41900','ENGL42000','ENGL42100','ENGL42201','ENGL42400','ENGL49000','MGMT39000','CHM46200', 'COM21700']);
     rec.set("Technical Presentation",['BIOL44100','COM11400','COM31400','COM31500','COM32400','COM41500','SCLA10200','CHM46200', 'COM21700']);
-
     let human = false;
     let beh_sci = false;
     let oral = false;
@@ -175,6 +173,28 @@ function incomplete_core(input_array) { // input text field
 
     }
 
+function createDropDownOnPage1() {
+
+    const dropdown1 = document.getElementById("myDropdown")
+    let displayHTML = ""
+
+    core_classes.forEach((el) => {
+
+        displayHTML += `
+        <a>
+            ${el}
+        </a>
+        `
+
+    }) 
+
+
+    dropdown1.innerHTML = displayHTML
+
+}
+
+createDropDownOnPage1()
+
 //provide array of classes student finished, returns map oof
 function courselist_return(historyofclasses) {
     let returned_courses = sorted_course_counter;
@@ -197,7 +217,6 @@ function return_particular_category(category, history_in_that_category) {
     }
     total_courses_in_the_category.sort((a, b) => a[1][0] - b[1][0]).reverse();
 
-    console.log(total_courses_in_the_category);
     return total_courses_in_the_category;
 }
 return_particular_category("Oral Communications", ["EDPS31500"])
@@ -213,7 +232,45 @@ completedCoursesOptions.sort()
 
 let temp_CompletedCoursesOptions = []
 let displayHTML = ""
-let completedCourses = []
+
+let completedClassesDiv = document.getElementById("completedClassesDiv")
+let completedCourses
+
+function start() {
+
+    console.log(localStorage.getItem("completedCourses") === null)
+
+    if (localStorage.getItem("completedCourses") === null) {
+        localStorage.completedCourses = JSON.stringify(["init"])
+    } else {
+
+        if (JSON.parse(localStorage.completedCourses)[0] !== "init") {
+
+            completedCourses = JSON.parse(localStorage.completedCourses)
+            
+            completedCourses.forEach(el => {
+
+                completedClassesDiv.innerHTML += `
+                            <div class="completedClass-btn">
+
+                                <div>
+                                    ${el}
+                                </div>
+
+                                <button class="completedClassX-btn" onclick="removeCompletedClass('${el}')">
+                                x
+                                </button>
+                            </div>
+                                                `
+
+            })
+        }
+    }
+}
+
+start()
+
+completedCourses = JSON.parse(localStorage.completedCourses)
 
 function createInitDropDownOnPage1() {
 
@@ -223,7 +280,7 @@ function createInitDropDownOnPage1() {
     completedCoursesOptions.forEach((el) => {
 
         displayHTML += `
-        <a onclick="addCompletedClass('${el}')">
+        <a style="font-family: Arial" onclick="addCompletedClass('${el}')">
             ${el}
         </a>
         `
@@ -254,28 +311,73 @@ function filterFunction() {
     }
 }
 
-const completedClassesDiv = document.getElementById("completedClasses")
-
 function addCompletedClass(...clas) {
 
     if (completedCourses.includes(clas[0])) {
         // continue
     } else {
 
-        completedCourses.push(clas[0])
+        if (completedCourses[0] === "init") {
+            completedCourses[0] = clas[0]
+        } else {
+
+            completedCourses.push(clas[0])
+        }
 
         completedClassesDiv.innerHTML += `
-                                        <div>
-                                        <button class="completedClass-btn">
-                                            ${clas[0]}
-                                            <button class="completedClassX-btn" onlick="removeCompletedClass('${clas[0]}')">
+                                            <div class="completedClass-btn">
+
+                                                <div>
+                                                ${clas[0]}
+                                                </div>
+
+                                                <button class="completedClassX-btn" onclick="removeCompletedClass('${clas[0]}')">
                                                 x
-                                            </button>
-                                        </button>
-                                        </div>
-                                    `
+                                                </button>
+                                            </div>
+                                        `
     }
 
+    localStorage.completedCourses = JSON.stringify(completedCourses);
+
 }
+
+let temp = []
+
+function removeCompletedClass(...clas) {
+
+    completedClassesDiv.innerHTML = ""
+
+    console.log("before deleting: " + completedCourses)
+
+    completedCourses.forEach((el) => {
+
+        if (el !== clas[0]) { // to delete
+
+            temp.push(el)
+
+            completedClassesDiv.innerHTML += `
+                                                <div class="completedClass-btn">
+    
+                                                    <div>
+                                                     ${el}
+                                                    </div>
+    
+                                                    <button class="completedClassX-btn" onclick="removeCompletedClass('${el}')">
+                                                    x
+                                                    </button>
+                                                </div>
+                                            `    
+        }
+
+    })
+
+    completedCourses = temp
+    console.log(completedCourses)
+    localStorage.completedCourses = JSON.stringify(completedCourses)
+
+    temp = []
+}
+
 
 

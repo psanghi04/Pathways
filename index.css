@@ -1,5 +1,6 @@
 body {
-    background-color: #373A36;
+    background-color: #1e211d;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 #form1 {
@@ -11,17 +12,20 @@ body {
     margin: 40px;
 }
 
+
+
 #form-btns {
-    margin-top: 550px;
+    margin-top: 110px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
 
-#completedClasses {
-    margin-top: 150px;
+#completedClassesDiv {
+    margin-top: 210px;
     margin-left: 40px;
     margin-right: 40px;
+    height: 40%;
     display: flex;
     flex-direction: column;
     overflow: scroll;
@@ -31,19 +35,28 @@ body {
     width: fit-content;
     padding: 5px 10px;
     font-size: 20px;
-    border: 2px solid #9D968D;
-    background-color: #28261c;
-    color: #9D968D;
+    border: 2px solid #494540;
+    background-color: #a8931e;
+    color: #1e211d;
     border-radius: 20px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: row;
 }
 
 .completedClassX-btn {
-    width: fit-content;
     padding: 5px 10px;
     font-size: 20px;
-    border: 2px solid #9D968D;
-    background-color: #28261c;
-    color: #9D968D;
+    background-color: #6e6253;
+    fill-opacity: 0;
+    border: none;
+    border-radius: 50%;
+    color: #ffe135;
+    margin-left: 10px;
+}
+
+.completedClassX-btn:hover {
+    background-color: #494540;
 }
 
 input {
@@ -112,7 +125,7 @@ display: none;
 position: absolute;
 background-color: #f9f9f9;
 min-width: 75%;
-height: 120px;
+height: 180px;
 overflow: scroll;
 box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 z-index: 1;
