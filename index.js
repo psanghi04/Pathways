@@ -1,9 +1,8 @@
 // ALL DATA
 
-let core_classes = ["CS18000","CS18200","CS24000","CS25000","CS25100","CS25200",
-"MA16100","MA16200","MA26100","MA26500"];
+let core_classes = ["MA16100","MA16200","MA26100","MA26500"];
 
-console.log(core_classes)
+console.log(core_classes)   
 
 let AP4Credit = new Map([
     ["AP Biology", ["BIOL11000", "BIOL11100"],],
@@ -12,8 +11,8 @@ let AP4Credit = new Map([
     ["AP Calculus BC - AB (subscore)", ["MA16500"],],
     ["AP Chemistry", ["CHM11500","CS11600"],],
     ["AP Chinese language and culture", ["CHNS10100", "CHNS10200", "CHNS20100" , "CHNS20200"],],
-    ["AP Computer science A or AB", ["CS17700"],],
-    ["AP Computer science principles", ["CS17700"],],
+   // ["AP Computer science A or AB", ["CS17700"],],
+   // ["AP Computer science principles", ["CS17700"],],
     ["AP English language and composition", ["ENGL10600"],],
     ["AP English literature and composition", ["ENGL23100"],],
     ["AP Environmental science", ["EAPS12500"],],

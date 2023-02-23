@@ -11,8 +11,8 @@ let AP4Credit = new Map([
     ["AP Calculus BC - AB (subscore)", ["MA16500"],],
     ["AP Chemistry", ["CHM11500","CS11600"],],
     ["AP Chinese language and culture", ["CHNS10100", "CHNS10200", "CHNS20100" , "CHNS20200"],],
-    ["AP Computer science A or AB", ["CS17700"],],
-    ["AP Computer science principles", ["CS17700"],],
+  //  ["AP Computer science A or AB", ["CS17700"],],
+   // ["AP Computer science principles", ["CS17700"],], 
     ["AP English language and composition", ["ENGL10600"],],
     ["AP English literature and composition", ["ENGL23100"],],
     ["AP Environmental science", ["EAPS12500"],],
@@ -832,7 +832,7 @@ rec.set("Science", ['ANTH20400', 'ASTR26300', 'ASTR26400', 'BIOL11000', 'BIOL111
 rec.set("Science, Tech and Society", ['ABE22600', 'ABE29000', 'AD39500', 'AGRY12500', 'AGRY28500', 'AGRY29000', 'AMST31000', 'AMST32500', 'ANSC10200', 'ANTH21000', 'ASEC35500', 'ASM23600', 'BCHM10000', 'BCM10001', 'BIOL12100', 'BIOL31200', 'BTNY20100', 'BTNY21100', 'BTNY28500', 'CE35500', 'CGT17208', 'CM10000', 'COM25100', 'CS10100', 'EAPS10000', 'EAPS10400', 'EAPS10600', 'EAPS11300', 'EAPS12000', 'EAPS12500', 'EAPS12900', 'EAPS20000', 'EEE35500', 'ENGL22300', 'ENGL22600', 'ENGL23400', 'ENGR20100', 'ENGR27920', 'ENGR31000', 'ENGR37920', 'ENGR47920', 'ENTM10500', 'ENTM12800', 'ENTM21800', 'EPCS10100', 'EPCS10200', 'EPCS11100', 'EPCS12100', 'EPCS20100', 'EPCS20200', 'EPCS30100', 'EPCS30200', 'EPCS40100', 'EPCS40200', 'FNR10300', 'FNR12500', 'FNR22310', 'FNR23000', 'FNR24000', 'FS16100', 'HIST30305', 'HIST30605', 'HIST31305', 'HIST31405', 'HIST33205', 'HIST33300', 'HIST33400', 'HIST35000', 'HIST35205', 'HIST36305', 'HIST38001', 'HIST38400', 'HIST38700', 'HONR19901', 'HONR46000', 'HORT12100', 'HORT30600', 'HSCI20100', 'HSCI20200', 'IT22600', 'LA16100', 'ME29000', 'NRES12500', 'NRES29000', 'NUTR39800', 'PHIL20700', 'PHIL20800', 'PHIL22100', 'PHIL27000', 'POL22300', 'POL23700', 'PUBH20200', 'SA10202', 'SLHS11500', 'SLHS21500', 'SLHS30900', 'SOC33500', 'STAT11300', 'SYS30000', 'SYS35000', 'SYS40000', 'TECH12000', 'VIP17911', 'VIP17920', 'VIP27920', 'VIP37920', 'VIP47920', 'YDAE35500']);
 rec.set("Written Composition", ['AMST10100', 'CLCS23100', 'CLCS23700', 'CLCS33900', 'COM20400', 'EDCI20500', 'ENGL10600', 'ENGL10800', 'ENGL30400', 'ENGL38000', 'HONR19903', 'PHIL26000', 'SCLA10100', 'SPAN33000']);
 rec.set("Greater Issues in Science",['BIOL31200', 'BIOL48300', 'CHM49000', 'CHM49000', 'CNIT49900', 'EAPS30100', 'EAPS32700', 'EAPS36000', 'EAPS36400', 'EAPS37500', 'HIST35205', 'HONR29900', 'HONR39900', 'MA27900', 'ME49200', 'PHYS31700', 'PHYS49000', 'POL32700','STAT49000']);
-rec.set("Laboratory Science", ['BIOL11000/11100', 'BIOL12100/13100/13500', 'CHM11500/11600', 'CHM12500/12600', 'EAPS11100/11200', 'PHYS17200/27200', 'PHYS17200/24100', 'PHYS17200/22100', 'PHYS21800/21900', 'PHYS22000/22100', 'PHYS23300/23400']);
+rec.set("Laboratory Science", ['BIOL11000','BIOL11100', 'BIOL12100','BIOL13100','BIOL13500', 'CHM11500','CHM11600', 'CHM12500','CHM12600', 'EAPS11100','EAPS11200', 'PHYS17200','PHYS27200','PHYS24100','PHYS22100', 'PHYS21800','PHYS21900', 'PHYS22000', 'PHYS23300','PHYS23400']);
 rec.set("Languages",['GER10100', 'GER10200', 'GER11200', 'GER20100', 'GER20200', 'GER21100', 'GER21200', 'GER22300', 'GER22400', 'FR10100', 'FR10200', 'FR11200', 'FR20100', 'FR20200', 'FR21100', 'FR21200', 'FR22400', 'FR23000', 'FR24100', 'FR28000', 'FR30100', 'FR30200', 'FR31200', 'FR32400', 'FR33000', 'FR34100', 'FR34200', 'FR38000', 'FR39400', 'FR39600', 'FR39900', 'FR40100', 'FR40200', 'FR42400', 'FR44300', 'FR48000', 'CLCS18100', 'CLCS22000', 'CLCS23010', 'CLCS23100', 'CLCS23200', 'CLCS23300', 'CLCS23400', 'CLCS23500', 'CLCS23600', 'CLCS23700', 'CLCS23800', 'CLCS23900', 'CLCS28000', 'CLCS33700', 'CLCS33900', 'CLCS38000', 'CLCS38100',  'CLCS38300', 'CLCS38500', 'CLCS38600', 'CLCS38700', 'CLCS48000', 'CLCS48100', 'CLCS48300', 'CLCS49900', 'CHNS10100', 'CHNS10200', 'CHNS10700', 'CHNS20100', 'CHNS20200', 'CHNS20700', 'CHNS22400', 'CHNS23000', 'CHNS24100', 'CHNS28000', 'CHNS28100', 'CHNS28500', 'CHNS30100', 'CHNS30200', 'CHNS30500', 'CHNS31300', 'CHNS33000', 'CHNS34100', 'CHNS34200', 'CHNS39900', 'CHNS40100', 'CHNS40200', 'CHNS49000', 'CHNS49300', 'ARAB10100', 'ARAB10200', 'ARAB11100', 'ARAB11200', 'ARAB20100', 'ARAB20200', 'ARAB21100', 'ARAB21200', 'ARAB22400', 'ARAB23000', 'ARAB23900', 'ARAB28000', 'ARAB28100', 'ARAB30100', 'ARAB30200', 'ARAB33400']);
 rec.set("Technical Writing",['ENGL30400','ENGL30900','ENGL41900','ENGL42000','ENGL42100','ENGL42201','ENGL42400','ENGL49000','MGMT39000','CHM46200', 'COM21700']);
 rec.set("Technical Presentation",['BIOL44100','COM11400','COM31400','COM31500','COM32400','COM41500','SCLA10200','CHM46200', 'COM21700']);
@@ -942,48 +942,49 @@ course_counter_temp.get(courses[0])
 for (let i = 0; i < courses.length; i++) {
     for (let j = 0; j < parseInt(course_counter_temp.get(courses[i])[0]);j++) {
         console.log("whats up")
+        let link = "https://www.ratemycourses.io/purdue/course/" + courses[i];
         switch (course_counter.get(courses[i])[1][j]) {
             case "Humanities":
-                document.getElementById('Humanities').innerHTML += (courses[i]+"<br>");
+                document.getElementById('Humanities').innerHTML += courses[i] + ": " + '<a href="' + link + '">Rating</a>' + "<br>";
                 break;
             case "Behavioural Science":
-                document.getElementById('Behavioural-Science').innerHTML += (courses[i]+"<br>");
+                document.getElementById('Behavioural-Science').innerHTML += courses[i] + ": " + '<a href="' + link + '">Rating</a>' + "<br>";
                 break;
             case "Oral Communication":
-                document.getElementById('Oral-Communication').innerHTML += (courses[i]+"<br>");
+                document.getElementById('Oral-Communication').innerHTML += courses[i] + ": " + '<a href="' + link + '">Rating</a>' + "<br>";
                 break;
             case "Information Literacy":
-                document.getElementById('Information-Literacy').innerHTML += (courses[i]+"<br>");
+                document.getElementById('Information-Literacy').innerHTML += courses[i] + ": " + '<a href="' + link + '">Rating</a>' + "<br>";
                 break;
             case "Quantitative Reasoning":
-                document.getElementById('Quantitative-Reasoning').innerHTML += (courses[i]+"<br>");
+                document.getElementById('Quantitative-Reasoning').innerHTML += courses[i] + ": " + '<a href="' + link + '">Rating</a>' + "<br>";
                 break;
             case "Science":
-                console.log("SCIENCE")
-                document.getElementById('Science').innerHTML += (courses[i]+"<br>");
+                document.getElementById('Science').innerHTML += courses[i] + ": " + '<a href="' + link + '">Rating</a>' + "<br>";
                 break;
             case "Science, Tech and Society":
-                document.getElementById('Science-Tech-and-Society').innerHTML += (courses[i]+"<br>");
+                document.getElementById('Science-Tech-and-Society').innerHTML += courses[i] + ": " + '<a href="' + link + '">Rating</a>' + "<br>";
                 break;
             case "Written Composition":
-                document.getElementById('Written-Composition').innerHTML += (courses[i]+"<br>");
+                document.getElementById('Written-Composition').innerHTML += courses[i] + ": " + '<a href="' + link + '">Rating</a>' + "<br>";
                 break;
             case "Greater Issues in Science":
-                document.getElementById('Greater-Issues-in-Science').innerHTML += (courses[i]+"<br>");
+                document.getElementById('Greater-Issues-in-Science').innerHTML += courses[i] + ": " + '<a href="' + link + '">Rating</a>' + "<br>";
                 break;
             case "Laboratory Science":
-                document.getElementById('Laboratory-Science').innerHTML += (courses[i]+"<br>");
+                document.getElementById('Laboratory-Science').innerHTML += courses[i] + ": " + '<a href="' + link + '">Rating</a>' + "<br>";
                 break;
             case "Languages":
-                document.getElementById('Languages').innerHTML += (courses[i]+"<br>");
+                document.getElementById('Languages').innerHTML += courses[i] + ": " + '<a href="' + link + '">Rating</a>' + "<br>";
                 break;
             case "Technical Writing":
-                document.getElementById('Technical-Writing').innerHTML += (courses[i]+"<br>");
+                document.getElementById('Technical-Writing').innerHTML += courses[i] + ": " + '<a href="' + link + '">Rating</a>' + "<br>";
                 break;
             case "Technical Presentation":
-                document.getElementById('Technical-Presentation').innerHTML += (courses[i]+"<br>");
+                document.getElementById('Technical-Presentation').innerHTML += courses[i] + ": " + '<a href="' + link + '">Rating</a>' + "<br>";
                 break;
             }
+  
     }
     course_counter_temp.delete(courses[i]);
     rec_copy.delete(courses[i]);
@@ -1010,174 +1011,363 @@ for (let i = 0; i < courses.length; i++) {
 
 for (let i = 0; i < rec.get("Humanities").length; i++) {
 
-    document.getElementById('Humanities1').innerHTML += (rec.get("Humanities")[i] + "<br>");
+    let course = rec.get("Humanities")[i]
+    let flag = false;
+    for(let j = 0; j < courses.length; j++) {
+        if (courses[j] === course) {
+            flag = true;
+            break;
+        }
+    } 
+    if (flag) {
+        continue;
+    }
+
+    let link = "https://www.ratemycourses.io/purdue/course/" + course;
+
+    document.getElementById('Humanities1').innerHTML += "<div>" + (course + ": " + '<a href="' + link + '">Rating</a>' + "<br>");
     
-    if (parseInt(sorted_course_counter.get(rec.get("Humanities")[i])[0]) > 1) { //course satisfies >1 requirement
+    if (parseInt(sorted_course_counter.get(course)[0]) > 1) { //course satisfies >1 requirement
         document.getElementById('Humanities1').innerHTML += ("Satisfies ") //MRIDU reduce font size
     
-        for (let j = 0; j < parseInt(sorted_course_counter.get(rec.get("Humanities")[i])[0]); j++) {
+        for (let j = 0; j < parseInt(sorted_course_counter.get(course)[0]); j++) {
             console.log("done")
             //THIS WORKS
-            document.getElementById('Humanities1').innerHTML +=  (sorted_course_counter.get(rec.get("Humanities")[i])[1][j] + ",<br>") //MRIDU reduce font size
+            if (j < parseInt(sorted_course_counter.get(course)[0]) - 1) {
+                document.getElementById('Humanities1').innerHTML +=  (sorted_course_counter.get(course)[1][j] + ",<br>") //MRIDU reduce font size
+            } else {
+                document.getElementById('Humanities1').innerHTML +=  (sorted_course_counter.get(course)[1][j] + "</div><br>")
+            }
         }
         document.getElementById('Humanities1').innerHTML +=  "<br>"
-        }
+    } else {
+        document.getElementById('Humanities1').innerHTML += "</div><br>"
+    }
     
 }
-
+ 
 for (let i = 0; i < rec.get("Behavioural Science").length; i++) {
-    document.getElementById('Behavioural-Science1').innerHTML += (rec.get("Behavioural Science")[i] + "<br>");
+
+    let course = rec.get("Behavioural Science")[i]
+
+    let flag = false;
+    for(let j = 0; j < courses.length; j++) {
+        if (courses[j] === course) {
+            flag = true;
+            break;
+        }
+    } 
+    if (flag) {
+        continue;
+    }
+
+    let link = "https://www.ratemycourses.io/purdue/course/" + course;
+
+
+    document.getElementById('Behavioural-Science1').innerHTML += "<div>" + (course + ": " + '<a href="' + link + '">Rating</a>' + "<br>");
     
-    if (parseInt(sorted_course_counter.get(rec.get("Behavioural Science")[i])[0]) > 1) { //course satisfies >1 requirement
+    if (parseInt(sorted_course_counter.get(course)[0]) > 1) { //course satisfies >1 requirement
         document.getElementById('Behavioural-Science1').innerHTML += ("Satisfies ") //MRIDU reduce font size
     
-        for (let j = 0; j < parseInt(sorted_course_counter.get(rec.get("Behavioural Science")[i])[0]) ; j++) {
-            document.getElementById('Behavioural-Science1').innerHTML +=  sorted_course_counter.get(rec.get("Behavioural Science")[i])[1][j] + ",<br>" //MRIDU reduce font size
+        for (let j = 0; j < parseInt(sorted_course_counter.get(course)[0]); j++) {
+            console.log("done")
+            //THIS WORKS
+            if (j < parseInt(sorted_course_counter.get(course)[0]) - 1) {
+                document.getElementById('Behavioural-Science1').innerHTML +=  (sorted_course_counter.get(course)[1][j] + ",<br>") //MRIDU reduce font size
+            } else {
+                document.getElementById('Behavioural-Science1').innerHTML +=  (sorted_course_counter.get(course)[1][j] + "</div><br>")
+            }
         }
         document.getElementById('Behavioural-Science1').innerHTML +=  "<br>"
-        }
+    } else {
+        document.getElementById('Behavioural-Science1').innerHTML += "</div><br>"
+    }
     
 }
 
 for (let i = 0; i < rec.get("Oral Communication").length; i++) {
-    document.getElementById('Oral-Communication1').innerHTML += (rec.get("Oral Communication")[i] + "<br>");
+    let course = rec.get("Oral Communication")[i]
+    let flag = false;
+    for(let j = 0; j < courses.length; j++) {
+        if (courses[j] === course) {
+            flag = true;
+            break;
+        }
+    } 
+    if (flag) {
+        continue;
+    }
+    let link = "https://www.ratemycourses.io/purdue/course/" + course;
+
+    document.getElementById('Oral-Communication1').innerHTML += (course + ": " + '<a href="' + link + '">Rating</a>' + "<br>");
     
-    if (parseInt(sorted_course_counter.get(rec.get("Oral Communication")[i])[0]) > 1) { //course satisfies >1 requirement
+    if (parseInt(sorted_course_counter.get(course)[0]) > 1) { //course satisfies >1 requirement
         document.getElementById('Oral-Communication1').innerHTML += ("Satisfies ") //MRIDU reduce font size
     
-        for (let j = 0; j < parseInt(sorted_course_counter.get(rec.get("Oral Communication")[i])[0]);j++) {
-            document.getElementById('Oral-Communication1').innerHTML +=  sorted_course_counter.get(rec.get("Oral Communication")[i])[1][j] + ",<br>" //MRIDU reduce font size
+        for (let j = 0; j < parseInt(sorted_course_counter.get(course)[0]);j++) {
+            document.getElementById('Oral-Communication1').innerHTML +=  sorted_course_counter.get(course)[1][j] + ",<br>" //MRIDU reduce font size
         }
         document.getElementById('Oral-Communication1').innerHTML +=  "<br>"
         }
     
 }
 for (let i = 0; i < rec.get("Information Literacy").length; i++) {
-    document.getElementById('Information-Literacy1').innerHTML += (rec.get("Information Literacy")[i] + "<br>");
+    let course = rec.get("Information Literacy")[i];
+    let flag = false;
+    for(let j = 0; j < courses.length; j++) {
+        if (courses[j] === course) {
+            flag = true;
+            break;
+        }
+    } 
+    if (flag) {
+        continue;
+    }
+    let link = "https://www.ratemycourses.io/purdue/course/" + course;
+
+    document.getElementById('Information-Literacy1').innerHTML += (course + ": " + '<a href="' + link + '">Rating</a>' + "<br>");
     
-    if (parseInt(sorted_course_counter.get(rec.get("Information Literacy")[i])[0]) > 1) { //course satisfies >1 requirement
+    if (parseInt(sorted_course_counter.get(course)[0]) > 1) { //course satisfies >1 requirement
         document.getElementById('Information-Literacy1').innerHTML += ("Satisfies ") //MRIDU reduce font size
     
-        for (let j = 0; j < parseInt(sorted_course_counter.get(rec.get("Information Literacy")[i])[0]);j++) {
-            document.getElementById('Information-Literacy1').innerHTML +=  sorted_course_counter.get(rec.get("Information Literacy")[i])[1][j] + ",<br>" //MRIDU reduce font size
+        for (let j = 0; j < parseInt(sorted_course_counter.get(course)[0]);j++) {
+            document.getElementById('Information-Literacy1').innerHTML +=  sorted_course_counter.get(course)[1][j] + ",<br>" //MRIDU reduce font size
         }
         document.getElementById('Information-Literacy1').innerHTML +=  "<br>"
         }
     
 }
 for (let i = 0; i < rec.get("Quantitative Reasoning").length; i++) {
-    document.getElementById('Quantitative-Reasoning1').innerHTML += (rec.get("Quantitative Reasoning")[i] + "<br>");
+    let course = rec.get("Quantitative Reasoning")[i]
+    let flag = false;
+    for(let j = 0; j < courses.length; j++) {
+        if (courses[j] === course) {
+            flag = true;
+            break;
+        }
+    } 
+    if (flag) {
+        continue;
+    }
+    let link = "https://www.ratemycourses.io/purdue/course/" + course;
+
+    document.getElementById('Quantitative-Reasoning1').innerHTML += (course + ": " + '<a href="' + link + '">Rating</a>' + "<br>");
     
-    if (parseInt(sorted_course_counter.get(rec.get("Quantitative Reasoning")[i])[0]) > 1) { //course satisfies >1 requirement
+    if (parseInt(sorted_course_counter.get(course)[0]) > 1) { //course satisfies >1 requirement
         document.getElementById('Quantitative-Reasoning1').innerHTML += ("Satisfies ") //MRIDU reduce font size
     
-        for (let j = 0; j < parseInt(sorted_course_counter.get(rec.get("Quantitative Reasoning")[i])[0]);j++) {
-            document.getElementById('Quantitative-Reasoning1').innerHTML +=  sorted_course_counter.get(rec.get("Quantitative Reasoning")[i])[1][j] + ",<br>" //MRIDU reduce font size
+        for (let j = 0; j < parseInt(sorted_course_counter.get(course)[0]);j++) {
+            document.getElementById('Quantitative-Reasoning1').innerHTML +=  sorted_course_counter.get(course)[1][j] + ",<br>" //MRIDU reduce font size
         }
         document.getElementById('Quantitative-Reasoning1').innerHTML +=  "<br>"
         }
     
 }
 for (let i = 0; i < rec.get("Science").length; i++) {
-    document.getElementById('Science1').innerHTML += (rec.get("Science")[i] + "<br>");
+    let course = rec.get("Science")[i]
+    let flag = false;
+    for(let j = 0; j < courses.length; j++) {
+        if (courses[j] === course) {
+            flag = true;
+            break;
+        }
+    } 
+    if (flag) {
+        continue;
+    }
+    let link = "https://www.ratemycourses.io/purdue/course/" + course;
+
+    document.getElementById('Science1').innerHTML += (course + ": " + '<a href="' + link + '">Rating</a>' + "<br>");
     
-    if (parseInt(sorted_course_counter.get(rec.get("Science")[i])[0]) > 1) { //course satisfies >1 requirement
+    if (parseInt(sorted_course_counter.get(course)[0]) > 1) { //course satisfies >1 requirement
         document.getElementById('Science1').innerHTML += ("Satisfies ") //MRIDU reduce font size
     
-        for (let j = 0; j < parseInt(sorted_course_counter.get(rec.get("Science")[i])[0]); j++) {
+        for (let j = 0; j < parseInt(sorted_course_counter.get(course)[0]); j++) {
             
-            document.getElementById('Science1').innerHTML +=  sorted_course_counter.get(rec.get("Science")[i])[1][j] + ",<br>" //MRIDU reduce font size
+            document.getElementById('Science1').innerHTML +=  sorted_course_counter.get(course)[1][j] + ",<br>" //MRIDU reduce font size
         }
         document.getElementById('Science1').innerHTML +=  "<br>"
         }
     
 }
 for (let i = 0; i < rec.get("Science, Tech and Society").length; i++) {
-    document.getElementById('Science-Tech-and-Society1').innerHTML += (rec.get("Science, Tech and Society")[i] + "<br>");
+    let course = rec.get("Science, Tech and Society")[i];
+    let flag = false;
+    for(let j = 0; j < courses.length; j++) {
+        if (courses[j] === course) {
+            flag = true;
+            break;
+        }
+    } 
+    if (flag) {
+        continue;
+    }
+    let link = "https://www.ratemycourses.io/purdue/course/" + course;
+
+    document.getElementById('Science-Tech-and-Society1').innerHTML += (course + ": " + '<a href="' + link + '">Rating</a>' + "<br>");
     
-    if (parseInt(sorted_course_counter.get(rec.get("Science, Tech and Society")[i])[0]) > 1) { //course satisfies >1 requirement
+    if (parseInt(sorted_course_counter.get(course)[0]) > 1) { //course satisfies >1 requirement
         document.getElementById('Science-Tech-and-Society1').innerHTML += ("Satisfies ") //MRIDU reduce font size
     
-        for (let j = 0; j < parseInt(sorted_course_counter.get(rec.get("Science, Tech and Society")[i])[0]); j++) {
-            document.getElementById('Science-Tech-and-Society1').innerHTML +=  sorted_course_counter.get(rec.get("Science, Tech and Society")[i])[1][j] + ",<br>" //MRIDU reduce font size
+        for (let j = 0; j < parseInt(sorted_course_counter.get(course)[0]); j++) {
+            document.getElementById('Science-Tech-and-Society1').innerHTML +=  sorted_course_counter.get(course)[1][j] + ",<br>" //MRIDU reduce font size
         }
         document.getElementById('Science-Tech-and-Society1').innerHTML +=  "<br>"
         }
     
 }
 for (let i = 0; i < rec.get("Written Composition").length; i++) {
-    document.getElementById('Written-Composition1').innerHTML += (rec.get("Written Composition")[i] + "<br>");
+    let course = rec.get("Written Composition")[i];
+    let flag = false;
+    for(let j = 0; j < courses.length; j++) {
+        if (courses[j] === course) {
+            flag = true;
+            break;
+        }
+    } 
+    if (flag) {
+        continue;
+    }
+    let link = "https://www.ratemycourses.io/purdue/course/" + course;
+
+    document.getElementById('Written-Composition1').innerHTML += (course + ": " + '<a href="' + link + '">Rating</a>' + "<br>");
     
-    if (parseInt(sorted_course_counter.get(rec.get("Written Composition")[i])[0]) > 1) { //course satisfies >1 requirement
+    if (parseInt(sorted_course_counter.get(course)[0]) > 1) { //course satisfies >1 requirement
         document.getElementById('Written-Composition1').innerHTML += ("Satisfies ") //MRIDU reduce font size
     
-        for (let j = 0; j < parseInt(sorted_course_counter.get(rec.get("Written Composition")[i])[0]);j++) {
-            document.getElementById('Written-Composition1').innerHTML +=  sorted_course_counter.get(rec.get("Written Composition")[i])[1][j] + ",<br>" //MRIDU reduce font size
+        for (let j = 0; j < parseInt(sorted_course_counter.get(course)[0]);j++) {
+            document.getElementById('Written-Composition1').innerHTML +=  sorted_course_counter.get(course)[1][j] + ",<br>" //MRIDU reduce font size
         }
         document.getElementById('Written-Composition1').innerHTML +=  "<br>"
         }
     
 }
 for (let i = 0; i < rec.get("Greater Issues in Science").length; i++) {
-    document.getElementById('Greater-Issues-in-Science1').innerHTML += (rec.get("Greater Issues in Science")[i] + "<br>");
+    let course = rec.get("Greater Issues in Science")[i];
+    let flag = false;
+    for(let j = 0; j < courses.length; j++) {
+        if (courses[j] === course) {
+            flag = true;
+            break;
+        }
+    } 
+    if (flag) {
+        continue;
+    }
+    let link = "https://www.ratemycourses.io/purdue/course/" + course;
+
+    document.getElementById('Greater-Issues-in-Science1').innerHTML += (course + ": " + '<a href="' + link + '">Rating</a>' + "<br>");
     
-    if (parseInt(sorted_course_counter.get(rec.get("Greater Issues in Science")[i])[0]) > 1) { //course satisfies >1 requirement
+    if (parseInt(sorted_course_counter.get(course)[0]) > 1) { //course satisfies >1 requirement
         document.getElementById('Greater-Issues-in-Science1').innerHTML += ("Satisfies ") //MRIDU reduce font size
     
-        for (let j = 0; j < parseInt(sorted_course_counter.get(rec.get("Greater Issues in Science")[i])[0]);j++) {
-            document.getElementById('Greater-Issues-in-Science1').innerHTML +=  sorted_course_counter.get(rec.get("Greater Issues in Science")[i])[1][j] + ",<br>"//MRIDU reduce font size
+        for (let j = 0; j < parseInt(sorted_course_counter.get(course)[0]);j++) {
+            document.getElementById('Greater-Issues-in-Science1').innerHTML +=  sorted_course_counter.get(course)[1][j] + ",<br>"//MRIDU reduce font size
         }
         document.getElementById('Greater-Issues-in-Science1').innerHTML +=  "<br>"
         }
     
 }
 for (let i = 0; i < rec.get("Laboratory Science").length; i++) {
-    document.getElementById('Laboratory-Science1').innerHTML += (rec.get("Laboratory Science")[i] + "<br>");
+    let course = rec.get("Laboratory Science")[i];
+    let flag = false;
+    for(let j = 0; j < courses.length; j++) {
+        if (courses[j] === course) {
+            flag = true;
+            break;
+        }
+    } 
+    if (flag) {
+        continue;
+    }
+    let link = "https://www.ratemycourses.io/purdue/course/" + course;
+
+    document.getElementById('Laboratory-Science1').innerHTML += (course + ": " + '<a href="' + link + '">Rating</a>' + "<br>");
     
-    if (parseInt(sorted_course_counter.get(rec.get("Laboratory Science")[i])[0]) > 1) { //course satisfies >1 requirement
+    if (parseInt(sorted_course_counter.get(course)[0]) > 1) { //course satisfies >1 requirement
         document.getElementById('Laboratory-Science1').innerHTML += ("Satisfies ") //MRIDU reduce font size
     
-        for (let j = 0; j < parseInt(sorted_course_counter.get(rec.get("Laboratory Science")[i])[0]);j++) {
-            document.getElementById('Laboratory-Science1').innerHTML +=  sorted_course_counter.get(rec.get("Laboratory Science")[i])[1][j] + ",<br>" //MRIDU reduce font size
+        for (let j = 0; j < parseInt(sorted_course_counter.get(course)[0]);j++) {
+            document.getElementById('Laboratory-Science1').innerHTML +=  sorted_course_counter.get(course)[1][j] + ",<br>" //MRIDU reduce font size
         }
         document.getElementById('Laboratory-Science1').innerHTML +=  "<br>"
         }
     
 }
 for (let i = 0; i < rec.get("Languages").length; i++) {
-    document.getElementById('Languages1').innerHTML += (rec.get("Languages")[i] + "<br>");
+    let course = rec.get("Languages")[i];
+    let flag = false;
+    for(let j = 0; j < courses.length; j++) {
+        if (courses[j] === course) {
+            flag = true;
+            break;
+        }
+    } 
+    if (flag) {
+        continue;
+    }
+    let link = "https://www.ratemycourses.io/purdue/course/" + course;
+
+    document.getElementById('Languages1').innerHTML += (course + ": " + '<a href="' + link + '">Rating</a>' + "<br>");
     
-    if (parseInt(sorted_course_counter.get(rec.get("Languages")[i])[0]) > 1) { //course satisfies >1 requirement
+    if (parseInt(sorted_course_counter.get(course)[0]) > 1) { //course satisfies >1 requirement
         document.getElementById('Languages1').innerHTML += ("Satisfies ") //MRIDU reduce font size
     
-        for (let j = 0; j < parseInt(sorted_course_counter.get(rec.get("Languages")[i])[0]);j++) {
-            document.getElementById('Languages1').innerHTML +=  sorted_course_counter.get(rec.get("Languages")[i])[1][j] + ",<br>"//MRIDU reduce font size
+        for (let j = 0; j < parseInt(sorted_course_counter.get(course)[0]);j++) {
+            document.getElementById('Languages1').innerHTML +=  sorted_course_counter.get(course)[1][j] + ",<br>"//MRIDU reduce font size
         }
         document.getElementById('Languages1').innerHTML +=  "<br>"
         }
     
 }
 for (let i = 0; i < rec.get("Technical Writing").length; i++) {
-    document.getElementById('Technical-Writing1').innerHTML += (rec.get("Technical Writing")[i] + "<br>");
+    let course = rec.get("Technical Writing")[i];
+    let flag = false;
+    for(let j = 0; j < courses.length; j++) {
+        if (courses[j] === course) {
+            flag = true;
+            break;
+        }
+    } 
+    if (flag) {
+        continue;
+    }
+    let link = "https://www.ratemycourses.io/purdue/course/" + course;
+
+    document.getElementById('Technical-Writing1').innerHTML += (course + ": " + '<a href="' + link + '">Rating</a>' + "<br>");
     
-    if (parseInt(sorted_course_counter.get(rec.get("Technical Writing")[i])[0]) > 1) { //course satisfies >1 requirement
+    if (parseInt(sorted_course_counter.get(course)[0]) > 1) { //course satisfies >1 requirement
         document.getElementById('Technical-Writing1').innerHTML += ("Satisfies ") //MRIDU reduce font size
     
-        for (let j = 0; j < parseInt(sorted_course_counter.get(rec.get("Technical Writing")[i])[0]);j++) {
-            document.getElementById('Technical-Writing1').innerHTML +=  sorted_course_counter.get(rec.get("Technical Writing")[i])[1][j] + ",<br>" //MRIDU reduce font size
+        for (let j = 0; j < parseInt(sorted_course_counter.get(course)[0]);j++) {
+            document.getElementById('Technical-Writing1').innerHTML +=  sorted_course_counter.get(course)[1][j] + ",<br>" //MRIDU reduce font size
         }
         document.getElementById('Technical-Writing1').innerHTML +=  "<br>"
         }
     
 }
 for (let i = 0; i < rec.get("Technical Presentation").length; i++) {
-    document.getElementById('Technical-Presentation1').innerHTML += (rec.get("Technical Presentation")[i] + "<br>");
+
+    let course = rec.get("Technical Presentation")[i];
+    let flag = false;
+    for(let j = 0; j < courses.length; j++) {
+        if (courses[j] === course) {
+            flag = true;
+            break;
+        }
+    } 
+    if (flag) {
+        continue;
+    }   
+    let link = "https://www.ratemycourses.io/purdue/course/" + course;
+
+    document.getElementById('Technical-Presentation1').innerHTML += (course + ": " + '<a href="' + link + '">Rating</a>' + "<br>");
     
-    if (parseInt(sorted_course_counter.get(rec.get("Technical Presentation")[i])[0]) > 1) { //course satisfies >1 requirement
-        document.getElementById('Technical-Presentation1').innerHTML += ("Satisfies ") //MRIDU reduce font size
+    if (parseInt(sorted_course_counter.get(course)[0]) > 1) { //course satisfies >1 requirement
+        document.getElementById('Technical-Presentation1').innerHTML += "Satisfies "; //MRIDU reduce font size
     
-        for (let j = 0; j < parseInt(sorted_course_counter.get(rec.get("Technical Presentation")[i])[0]);j++) {
-            document.getElementById('Technical-Presentation1').innerHTML +=  sorted_course_counter.get(rec.get("Technical Presentation")[i])[1][j] + ",<br>" //MRIDU reduce font size
+        for (let j = 0; j < parseInt(sorted_course_counter.get(course)[0]);j++) {
+            document.getElementById('Technical-Presentation1').innerHTML +=  sorted_course_counter.get(course)[1][j] + ",<br>" //MRIDU reduce font size
         }
         document.getElementById('Technical-Presentation1').innerHTML +=  "<br>"
         }
